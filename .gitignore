@@ -1,0 +1,41 @@
+# Death Star Leak CTF - Git Ignore
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+
+# Test and Development
+test_output/
+*.test
+
+# Backup Files
+*.bak
+*.backup
+
+# VM and Container Files
+*.ova
+*.vmdk
+*.vdi
+*.qcow2
+
+# Documentation Build
+_site/
+.jekyll-cache/
+
+# Custom Deployments
+custom_flags.txt
+deployment_notes.txt

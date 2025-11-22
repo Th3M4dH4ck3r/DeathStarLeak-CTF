@@ -516,7 +516,7 @@ EOF
 
 # Create Apache config
 cat > /etc/apache2/sites-available/deathstar.conf << 'EOFAPACHE'
-<VirtualHost *:8080>
+<VirtualHost *:9000>
     ServerAdmin admin@deathstar.empire
     DocumentRoot /var/www/deathstar
 
@@ -531,9 +531,9 @@ cat > /etc/apache2/sites-available/deathstar.conf << 'EOFAPACHE'
 </VirtualHost>
 EOFAPACHE
 
-# Configure Apache to listen on port 8080
-if ! grep -q "Listen 8080" /etc/apache2/ports.conf; then
-    echo "Listen 8080" >> /etc/apache2/ports.conf
+# Configure Apache to listen on port 9000
+if ! grep -q "Listen 9000" /etc/apache2/ports.conf; then
+    echo "Listen 9000" >> /etc/apache2/ports.conf
 fi
 
 # Enable required modules
@@ -852,7 +852,7 @@ echo "  Death Star CTF Setup Complete! v2.0"
 echo "=================================================="
 echo ""
 echo "Access Points:"
-echo "  - Web Interface: http://localhost:8080"
+echo "  - Web Interface: http://localhost:9000"
 echo "  - SSH Service: Port 22"
 echo ""
 echo "Attack Vectors:"

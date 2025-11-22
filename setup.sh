@@ -582,8 +582,9 @@ chown stormtrooper:stormtrooper /home/stormtrooper/flag.txt
 
 # Hidden SSH key for imperial-officer
 mkdir -p /home/stormtrooper/.backup
+rm -rf /home/imperial-officer/.ssh
 mkdir -p /home/imperial-officer/.ssh
-ssh-keygen -t rsa -f /home/imperial-officer/.ssh/id_rsa -N "" -C "imperial-officer@deathstar" > /dev/null 2>&1
+ssh-keygen -t rsa -f /home/imperial-officer/.ssh/id_rsa -N "" -C "imperial-officer@deathstar" -q
 cp /home/imperial-officer/.ssh/id_rsa /home/stormtrooper/.backup/officer_key
 chmod 644 /home/stormtrooper/.backup/officer_key
 chown -R stormtrooper:stormtrooper /home/stormtrooper/.backup

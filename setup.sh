@@ -64,6 +64,7 @@ chmod 777 /var/www/deathstar/uploads
 
 # Create SQLite database with users
 echo "[+] Setting up Imperial database..."
+rm -f /var/www/deathstar/imperial.db
 sqlite3 /var/www/deathstar/imperial.db << 'EOFDB'
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,
